@@ -1,2 +1,33 @@
-# officialzh-leyu-com-cn-2
-乐鱼体育 - https://officialzh-leyu.com.cn
+# 乐鱼体育 - 官方网站
+
+欢迎访问 **乐鱼体育** 官方站点。本仓库提供关于乐鱼体育平台的基本介绍与访问指引。
+
+## 简介
+
+乐鱼体育（[https://officialzh-leyu.com.cn](https://officialzh-leyu.com.cn)）是一个专注于体育赛事资讯与互动体验的在线平台。用户可以通过乐鱼体育获取丰富的体育相关内容，并参与各类体育活动的讨论与分享。
+
+## 特点
+
+- **丰富的体育内容**：乐鱼体育涵盖多种体育项目，提供赛事信息、数据分析及最新动态。
+- **用户友好界面**：平台设计简洁直观，便于浏览和操作。
+- **稳定访问**：通过 [https://officialzh-leyu.com.cn](https://officialzh-leyu.com.cn) 即可直接进入乐鱼体育，无需额外配置。
+
+## 访问方式
+
+您可以通过以下方式访问乐鱼体育：
+
+1. 直接在浏览器中输入官方网址：**[https://officialzh-leyu.com.cn](https://officialzh-leyu.com.cn)**
+2. 收藏该链接以便快速访问乐鱼体育的最新内容。
+
+## 注意事项
+
+- 请确保使用乐鱼体育官方域名 [https://officialzh-leyu.com.cn](https://officialzh-leyu.com.cn) 进行访问，避免误入仿冒站点。
+- 本平台仅供合法合规使用，用户应遵守相关法律法规。
+
+## 联系我们
+
+如对乐鱼体育有任何疑问或建议，欢迎通过官方网站提供的联系方式与我们取得联系。
+
+---
+
+感谢您对乐鱼体育的关注与支持！
