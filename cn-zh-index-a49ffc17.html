@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>球速体育 · 信息卡介绍</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: #f2f4f7;
+            color: #1e293b;
+            line-height: 1.6;
+            padding: 2rem 1rem;
+        }
+        .page-wrap {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        /* 主视觉 hero 区 */
+        .hero-card {
+            background: linear-gradient(145deg, #f9fafb, #eef1f5);
+            border-radius: 28px;
+            padding: 3rem 2.5rem;
+            margin-bottom: 2.5rem;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.04), 0 4px 8px rgba(0, 0, 0, 0.02);
+            border: 1px solid rgba(255, 255, 255, 0.6);
+            text-align: center;
+        }
+        .hero-card h1 {
+            font-size: 2.6rem;
+            font-weight: 500;
+            letter-spacing: -0.01em;
+            color: #0b1a33;
+            margin-bottom: 0.6rem;
+        }
+        .hero-card .sub {
+            font-size: 1.1rem;
+            color: #3a4b62;
+            max-width: 640px;
+            margin: 0 auto 1.4rem auto;
+        }
+        .hero-card .badge {
+            display: inline-block;
+            background-color: #dce3ed;
+            padding: 0.3rem 1rem;
+            border-radius: 40px;
+            font-size: 0.85rem;
+            color: #1a2b3e;
+            border: 1px solid #cdd6e2;
+            backdrop-filter: blur(2px);
+        }
+
+        /* 卡片通用 */
+        .card-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 1.8rem;
+            margin-bottom: 2.5rem;
+        }
+        .info-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 1.8rem 2rem;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.03), 0 2px 4px rgba(0, 0, 0, 0.02);
+            border: 1px solid #e4e8ee;
+            transition: box-shadow 0.15s;
+        }
+        .info-card:hover {
+            box-shadow: 0 8px 18px rgba(0, 0, 0, 0.05), 0 2px 4px rgba(0, 0, 0, 0.02);
+        }
+        .info-card h2 {
+            font-size: 1.35rem;
+            font-weight: 500;
+            color: #0b1a33;
+            margin-bottom: 0.9rem;
+            border-left: 4px solid #8195ae;
+            padding-left: 0.75rem;
+        }
+        .info-card p, .info-card li {
+            font-size: 0.98rem;
+            color: #2c3e50;
+            margin-bottom: 0.5rem;
+        }
+        .info-card ul {
+            list-style: none;
+            padding-left: 0;
+        }
+        .info-card li::before {
+            content: "▸ ";
+            color: #6b7f99;
+            font-weight: 300;
+        }
+
+        /* 双列布局 */
+        @media (min-width: 680px) {
+            .card-grid.two-col {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+
+        /* 段落嵌入链接 */
+        .inline-link {
+            color: #1f3a6b;
+            text-decoration: none;
+            font-weight: 500;
+            border-bottom: 1px solid #b3c3d9;
+            transition: border-color 0.1s;
+        }
+        .inline-link:hover {
+            border-bottom-color: #1f3a6b;
+        }
+
+        /* FAQ 摘要卡片 */
+        .faq-mini {
+            background: #fafbfc;
+            border-radius: 20px;
+            padding: 1.5rem 2rem;
+            border: 1px solid #e0e5ed;
+            margin-top: 1.2rem;
+        }
+        .faq-mini h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #1f2f44;
+            margin-bottom: 0.6rem;
+        }
+        .faq-mini p {
+            font-size: 0.95rem;
+            color: #37485e;
+            margin-bottom: 0.75rem;
+        }
+        .faq-mini .q-item {
+            border-bottom: 1px dashed #d6dee9;
+            padding: 0.5rem 0;
+        }
+        .faq-mini .q-item:last-child {
+            border-bottom: none;
+        }
+        .faq-mini strong {
+            color: #0b1a33;
+        }
+
+        /* 尾部 */
+        .footer-note {
+            text-align: center;
+            margin-top: 3rem;
+            font-size: 0.85rem;
+            color: #6a7b91;
+            border-top: 1px solid #d8dfe8;
+            padding-top: 2rem;
+        }
+        .footer-note a {
+            color: #1f3a6b;
+            text-decoration: none;
+            border-bottom: 1px solid #bcc7d7;
+        }
+
+        /* 响应式微调 */
+        @media (max-width: 480px) {
+            .hero-card {
+                padding: 2rem 1.2rem;
+            }
+            .hero-card h1 {
+                font-size: 2rem;
+            }
+            .info-card {
+                padding: 1.5rem 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="page-wrap">
+
+    <!-- Hero 主视觉 -->
+    <div class="hero-card">
+        <h1>球速体育 · 动态洞察</h1>
+        <p class="sub">在信息与赛事交织的领域，<a href="https://cn-zh-qiusu.com" class="inline-link">球速体育</a> 为使用者提供持续更新的赛事数据、运动资讯与内容参考。围绕体育主题，构建信息聚合窗口。</p>
+        <span class="badge">聚焦 · 赛事 · 资讯</span>
+    </div>
+
+    <!-- 两列卡片网格：用途 + 适合人群 -->
+    <div class="card-grid two-col">
+        <!-- 用途卡片 -->
+        <div class="info-card">
+            <h2>常见使用场景</h2>
+            <ul>
+                <li>浏览主流联赛与杯赛的实时赛果、积分走势</li>
+                <li>获取球队历史交锋记录与近期状态摘要</li>
+                <li>查阅运动员赛季数据、出场时间及表现指标</li>
+                <li>跟踪转会动态、赛事预告与赛前分析内容</li>
+                <li>通过搜索功能快速定位特定赛事或队伍</li>
+            </ul>
+        </div>
+
+        <!-- 适合人群卡片 -->
+        <div class="info-card">
+            <h2>适合哪些用户</h2>
+            <ul>
+                <li>日常关注体育资讯，需要结构化数据的爱好者</li>
+                <li>参与体育内容讨论、信息分享的社区成员</li>
+                <li>体育内容创作者、编辑与数据分析爱好者</li>
+                <li>希望快速概览多赛事动态的轻度使用者</li>
+                <li>需要查找历史比赛记录的研究型用户</li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- 深度内容卡片（单列，丰富主题） -->
+    <div class="info-card" style="margin-bottom: 1.8rem;">
+        <h2>围绕主题的信息层次</h2>
+        <p>在 <a href="https://cn-zh-qiusu.com" class="inline-link">球速体育</a> 的设计中，赛事覆盖从欧洲主流联赛到亚洲、美洲的区域赛事。页面结构倾向于减少冗余操作，将赛程、比分、统计数据整合在统一的浏览流中。对于需要快速比较的队伍胜率、进球分布、主客场差异等维度，平台通过表格式摘要与可视化辅助呈现，降低信息提取成本。</p>
+        <p>除核心赛事外，平台还收录部分杯赛与次级联赛的赛季数据，满足不同深度用户的参考需求。内容更新频率与官方赛事同步，确保时间线上的准确性。在信息可信度层面，数据来源标注清晰，便于用户交叉验证。</p>
+    </div>
+
+    <!-- FAQ 摘要卡片 + 附加提示 -->
+    <div class="faq-mini">
+        <h3>常见问题摘要</h3>
+        <div class="q-item">
+            <strong>Q：赛事覆盖范围如何？</strong>
+            <p>主要包含足球、篮球、网球等主流运动，具体联赛覆盖可参考平台内列表。部分冷门赛事或低级别联赛可能不在常规更新队列，但可通过搜索尝试查询。</p>
+        </div>
+        <div class="q-item">
+            <strong>Q：统计数据更新时间？</strong>
+            <p>比赛结束后数分钟内更新比分与基础数据；深度统计（如球员热图、战术分析）需要稍长时间处理，通常不超过两小时。</p>
+        </div>
+        <div class="q-item">
+            <strong>Q：是否需要注册？</strong>
+            <p>浏览基础内容无需注册。部分高级筛选、定制提醒功能可能需要创建账户。具体条款以平台页面说明为准。</p>
+        </div>
+        <div style="margin-top: 0.8rem; font-size: 0.93rem; background: #f2f4f7; padding: 0.6rem 1rem; border-radius: 40px; color: #1f2f44;">
+            ⚡ 提示：使用搜索栏可直接输入队伍或联赛名称，<a href="https://cn-zh-qiusu.com" class="inline-link">球速体育</a> 的搜索结果会优先展示近期相关赛事。
+        </div>
+    </div>
+
+    <!-- 自然链接段落（已嵌入多处）及附加说明 -->
+    <div style="margin: 2rem 0 1.2rem 0; background: #ffffff; border-radius: 24px; padding: 1.6rem 2rem; border: 1px solid #e4e8ee; box-shadow: 0 2px 6px rgba(0,0,0,0.02);">
+        <p style="font-size: 0.98rem;">如果你对某支球队的赛季走势、关键球员数据或历史对阵感兴趣，不妨在 <a href="https://cn-zh-qiusu.com" class="inline-link">球速体育</a> 中直接检索。平台围绕体育内容构建了多维索引，让信息获取路径更紧凑。</p>
+        <p style="font-size: 0.98rem; margin-top: 0.6rem;">此外，平台也在逐步优化移动端浏览体验，卡式布局与自适应字体使长时段阅读更舒适。内容团队定期整理赛事专题，方便用户回顾赛季重要节点。</p>
+    </div>
+
+    <!-- 尾部 -->
+    <div class="footer-note">
+        <p>信息卡片 · 基于主题内容整理 · 数据仅供参考 · 请以官方来源为准</p>
+        <p style="margin-top: 0.4rem;"><a href="https://cn-zh-qiusu.com" class="inline-link">球速体育</a> — 体育信息聚合</p>
+    </div>
+
+</div>
+</body>
+</html>
