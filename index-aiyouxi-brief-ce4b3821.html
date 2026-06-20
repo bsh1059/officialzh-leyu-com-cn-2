@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=2.0">
+    <title>爱游戏 · 轻量导航</title>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: #f7f7fa;
+            color: #1e1e24;
+            line-height: 1.65;
+            -webkit-font-smoothing: antialiased;
+        }
+        a {
+            color: #2c6e49;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+        a:hover { color: #1d4f32; text-decoration: underline; }
+
+        /* 深色头图 – 简洁克制 */
+        .hero {
+            background: #1a1f2e;
+            background-image: radial-gradient(circle at 20% 40%, #2e3b4e 0%, #12161f 90%);
+            padding: 72px 20px 60px;
+            text-align: center;
+            color: #e6e8ed;
+        }
+        .hero h1 {
+            font-size: 2.6rem;
+            font-weight: 400;
+            letter-spacing: 2px;
+            margin-bottom: 12px;
+        }
+        .hero h1 strong {
+            font-weight: 600;
+            color: #b6d7a8;
+        }
+        .hero p {
+            max-width: 600px;
+            margin: 0 auto;
+            font-size: 1.1rem;
+            opacity: 0.8;
+            line-height: 1.6;
+        }
+
+        /* 正文区 – 浅色背景 */
+        .container {
+            max-width: 1060px;
+            margin: 0 auto;
+            padding: 30px 20px 60px;
+        }
+
+        /* 介绍段落 */
+        .intro {
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 36px 32px;
+            margin: -16px 0 40px;
+            box-shadow: 0 8px 18px rgba(0,0,0,0.03);
+            font-size: 1.05rem;
+        }
+        .intro p {
+            margin-bottom: 1.2rem;
+        }
+        .intro p:last-child { margin-bottom: 0; }
+
+        /* 三个场景模块 – 卡片布局 */
+        .scene-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 24px;
+            margin: 40px 0;
+        }
+        .scene-card {
+            background: #ffffff;
+            border-radius: 18px;
+            padding: 28px 22px 24px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+            transition: transform 0.2s ease, box-shadow 0.2s;
+            border-bottom: 3px solid transparent;
+        }
+        .scene-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 10px 22px rgba(0,0,0,0.06);
+            border-bottom-color: #2c6e49;
+        }
+        .scene-card h3 {
+            font-size: 1.3rem;
+            font-weight: 500;
+            margin-bottom: 12px;
+            color: #1e2a3a;
+        }
+        .scene-card p {
+            font-size: 0.95rem;
+            color: #3b3b44;
+        }
+        .scene-card .indicator {
+            display: inline-block;
+            margin-top: 14px;
+            font-size: 0.85rem;
+            color: #2c6e49;
+            border-bottom: 1px dashed #b8d0b8;
+        }
+
+        /* 常见说明 */
+        .faq-section {
+            margin: 48px 0 36px;
+            background: #ffffff;
+            border-radius: 20px;
+            padding: 32px 30px 28px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
+        }
+        .faq-section h2 {
+            font-weight: 450;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
+            margin-bottom: 20px;
+            color: #1e2a3a;
+        }
+        .faq-item {
+            padding: 14px 0;
+            border-bottom: 1px solid #ececf0;
+        }
+        .faq-item:last-of-type { border-bottom: none; }
+        .faq-item strong {
+            display: block;
+            font-weight: 500;
+            margin-bottom: 6px;
+            color: #1f2a36;
+        }
+        .faq-item p {
+            font-size: 0.95rem;
+            color: #444450;
+        }
+
+        /* 脚注 */
+        .footer-note {
+            border-top: 1px solid #dfe0e6;
+            padding: 24px 0 10px;
+            margin-top: 16px;
+            font-size: 0.9rem;
+            color: #6b6b78;
+            text-align: center;
+        }
+        .footer-note a {
+            color: #3a6e4e;
+        }
+
+        /* 响应式 */
+        @media (max-width: 820px) {
+            .scene-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .hero h1 { font-size: 2.2rem; }
+        }
+        @media (max-width: 540px) {
+            .scene-grid {
+                grid-template-columns: 1fr;
+            }
+            .hero { padding: 48px 16px 40px; }
+            .hero h1 { font-size: 1.9rem; }
+            .intro { padding: 26px 18px; }
+            .faq-section { padding: 24px 18px; }
+        }
+    </style>
+</head>
+<body>
+
+<header class="hero">
+    <h1><strong>爱游戏</strong> · 轻量导航</h1>
+    <p>记录一些与游戏有关的想法、习惯与角落，不匆忙，也不拥挤。</p>
+</header>
+
+<main class="container">
+
+    <div class="intro">
+        <p>
+            很长一段时间里，我都在寻找一个可以安静存放“游戏”这个词的地方。不是社区，也不是排行榜，而是一个更简单的入口：那里有熟悉的名字，也有未曾探索的类型。后来我遇见了 <a href="https://index--aiyouxi.com">爱游戏</a>，它像一本没有封面的笔记，把游戏拆解成可以慢慢读的碎片。
+        </p>
+        <p>
+            这里没有沉重的攻略或数据，更多是关于游戏如何成为日常的延伸——某个傍晚打开模拟器重温旧作，或是周末被一段独立配乐打动。站点本身保持了一种克制的陈列感，让你把注意力放回游戏本身。
+        </p>
+        <p>
+            下面三个场景，是我在使用 <a href="https://index--aiyouxi.com">爱游戏</a> 时最常遇到的切片。它们不算功能，更像是一扇扇窗。
+        </p>
+    </div>
+
+    <!-- 三个场景模块 -->
+    <div class="scene-grid">
+        <div class="scene-card">
+            <h3>存档 · 笔记</h3>
+            <p>每通关一部作品，随手写下几句感受。不追求长评，有时只是一个短句、一个印象，像给记忆贴一张便签。</p>
+            <span class="indicator">→ 零散记录</span>
+        </div>
+        <div class="scene-card">
+            <h3>类型 · 索引</h3>
+            <p>解谜、模拟、角色扮演……按照自己习惯的方式整理游戏库。没有复杂的标签系统，只有干净的分类和一点个人注解。</p>
+            <span class="indicator">→ 缓慢整理</span>
+        </div>
+        <div class="scene-card">
+            <h3>灵感 · 混杂</h3>
+            <p>偶尔收集游戏里的概念美术、场景截图或配乐名称，它们未必实际有用，却总能让你回想起某个傍晚的沉浸时刻。</p>
+            <span class="indicator">→ 无声存档</span>
+        </div>
+    </div>
+
+    <!-- 常见说明 -->
+    <div class="faq-section">
+        <h2>一些基础说明</h2>
+
+        <div class="faq-item">
+            <strong>这个站点主要做什么？</strong>
+            <p>提供一个围绕「游戏」的轻量信息集合，以个人视角组织内容。你可以把它当作一个安静的侧廊，用来寻找或重温那些与游戏相关的碎片。</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>内容更新频率如何？</strong>
+            <p>没有固定周期，更多取决于游玩节奏和整理动力。偶尔会一次加入几部作品，也可能几周没有任何变动。这很符合它轻量的定位。</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>是否需要注册或登录？</strong>
+            <p>目前站点以浏览为主，不需要注册。整个结构偏向于展示而非交互，你直接打开 <a href="https://index--aiyouxi.com">爱游戏</a> 就能看到全部内容。</p>
+        </div>
+
+        <div class="faq-item">
+            <strong>这些游戏推荐来源可靠吗？</strong>
+            <p>所有条目都基于个人接触或公开信息整理，不存在商业引导。如果你对某款作品感兴趣，建议额外查询更详细的玩家评价或实机视频。</p>
+        </div>
+    </div>
+
+    <div class="footer-note">
+        <span>一个安静的角落 · <a href="https://index--aiyouxi.com">爱游戏</a></span>
+    </div>
+
+</main>
+
+</body>
+</html>
